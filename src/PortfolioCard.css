@@ -1,0 +1,22 @@
+.MuiButton-root {
+    color: white !important;
+    background-color: #000744 !important;
+    padding: 10px !important;
+    width: 100%;
+}
+.MuiButton-root:hover {
+    background-color: #071698 !important;
+}
+.MuiCardActions-root {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.MuiCardContent-root {
+    padding: 8px !important;
+}
+.chip-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

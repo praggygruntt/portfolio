@@ -2,17 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -21,6 +14,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import {faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
 import {Link, NavLink} from 'react-router-dom';
+import PortfolioCard from './PortfolioCard';
 
 import './Welcome.css';
 import './Portfolio.css';
@@ -92,7 +86,7 @@ function ResponsiveDrawer(props) {
         </div>
         <div style={{background: "rgba(0,3,29,.7)", height: "100%"}}>
             <div className="Drawer-namecard">
-                <Link to="/"><img src={headshot}/></Link>
+                <Link to="/"><img src={headshot} alt="Zachary Bowman Headshot"/></Link>
                 <h1 style={{fontWeight: "700"}}>Zachary Bowman</h1>
                 <h2 style={{fontWeight: "200"}}>Front-End Web Developer</h2>
             </div>
@@ -103,12 +97,12 @@ function ResponsiveDrawer(props) {
             </div>
             <div className="Drawer-links">
             <div className="Drawer-links-single-container">
-                    <a target="_blank" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.github.com/praggygruntt"><h2 style={{marginRight: "3%"}}>Github</h2></a>
-                    <a target="_blank" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.github.com/praggygruntt"><FontAwesomeIcon size="lg" icon={faGithub}/></a>
+                    <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.github.com/praggygruntt"><h2 style={{marginRight: "3%"}}>Github</h2></a>
+                    <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.github.com/praggygruntt"><FontAwesomeIcon size="lg" icon={faGithub}/></a>
                 </div>       
                 <div className="Drawer-links-single-container">
-                  <a target="_blank" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.linkedin.com/in/zacharybbowman/"><h2 style={{marginRight: "3%"}}>LinkedIn</h2></a>
-                  <a target="_blank" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.linkedin.com/in/zacharybbowman/"><FontAwesomeIcon size="lg" icon={faLinkedin}/></a>
+                  <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.linkedin.com/in/zacharybbowman/"><h2 style={{marginRight: "3%"}}>LinkedIn</h2></a>
+                  <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.linkedin.com/in/zacharybbowman/"><FontAwesomeIcon size="lg" icon={faLinkedin}/></a>
                 </div> 
                 <div className="Drawer-links-single-container">
                     <h2 style={{marginRight: "3%"}}>zchrybwmn@gmail.com</h2>
@@ -118,8 +112,6 @@ function ResponsiveDrawer(props) {
         </div>
       </div>
     );
-    const screenWidth = window.screen.width;
-    console.log(screenWidth);
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -175,6 +167,18 @@ function ResponsiveDrawer(props) {
             
             <div className="Portfolio" style={{position: "relative", zIndex: "6"}}>
                 <h1>Portfolio</h1>
+                <div className="Portfolio-card-container">
+                  {/* <PortfolioCard title="Couleur" image="./assets/Headshot.png"/> 
+                  <PortfolioCard title="Sippit" image="./assets/Headshot.png"/>   
+                  <PortfolioCard title="Yahtzee" image="./assets/Headshot.png"/> 
+                  <PortfolioCard title="Lights Out" image="./assets/Headshot.png"/>
+                  <PortfolioCard title="Hot Wheels Repo" image="./assets/Headshot.png"/>  */}
+                  <PortfolioCard 
+                    title="Card Dealer" 
+                    image={require("./assets/CardDealerImage.png")} 
+                    text="React" 
+                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}/> 
+                </div>
             </div>
             <div className="stars">
               <div id='stars'></div>
