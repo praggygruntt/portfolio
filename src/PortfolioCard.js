@@ -8,8 +8,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
-
 import './PortfolioCard.css';
+import { Divider } from '@material-ui/core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; 
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = makeStyles({
   card: {
@@ -20,7 +22,8 @@ const useStyles = makeStyles({
     border: "1px solid rgba(255, 255, 255, .36)",
     color: "white",
     marginRight: "10px",
-    marginLeft: "10px"
+    marginLeft: "10px",
+    marginBottom: "15px"
   },
   media: {
     height: 140,
@@ -33,7 +36,7 @@ const useStyles = makeStyles({
 
 export default function PortfolioCard(props) {
   const classes = useStyles();
-    const {title, image, chips} = props;
+    const {title, image, chips, text, link} = props;
     console.log(chips);
     const mappedChips = chips.map(chip => <Chip label={chip} key={chip} />)
   return (
@@ -49,17 +52,17 @@ export default function PortfolioCard(props) {
             {title}
           </Typography>
           <Typography variant="body1" component="p" className={classes.textContent}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {text}
           </Typography>
         </CardContent>
       </CardActionArea>
+      <Divider light/>
       <CardActions>
         <div className="chip-container" style={{display: "block", width: "100%"}}>
           {mappedChips}
         </div>
         <Button size="small" color="default">
-          View Code
+          <a href={link} target="_blank" rel="noopener noreferrer" style={{color: "inherit", textDecoration: "none"}}>View on Github <FontAwesomeIcon size="lg" icon={faGithub}/></a>
         </Button>
       </CardActions>
     </Card>

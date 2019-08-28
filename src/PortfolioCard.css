@@ -15,8 +15,23 @@
     padding: 8px !important;
 }
 .chip-container {
-    padding: 10px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+.MuiChip-root {
+    color: white !important;
+    height: 20px !important;
+    margin: 5px;
+    background: #000744 !important;
+    letter-spacing: 1px;
+    font-weight: 300;
+    padding: 2px !important;    
+}
+.MuiDivider-light {
+    background-color: rgba(255, 255, 255, .4) !important;
+    width: 85%;
+    margin: 0 auto !important;
+    text-align: center;
 }

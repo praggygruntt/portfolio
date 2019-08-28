@@ -94,7 +94,7 @@ function ResponsiveDrawer(props) {
             </div>
             <div className="Drawer-links">
                 <NavLink exact activeClassName="active" to="/portfolio"><h2>Portfolio</h2></NavLink>
-                <h2>Specializations</h2>
+                <h2>My Story</h2>
                 <h2>Get in touch</h2>
             </div>
             <div className="Drawer-links">

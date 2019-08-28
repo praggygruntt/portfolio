@@ -15,6 +15,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import {faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
 import {Link, NavLink} from 'react-router-dom';
 import PortfolioCard from './PortfolioCard';
+import {Divider} from '@material-ui/core';
 
 import './Welcome.css';
 import './Portfolio.css';
@@ -64,6 +65,11 @@ const useStyles = makeStyles(theme => ({
       width: "100%",
       height: "100vh"
     },
+    title: {
+      fontSize: "3rem",
+      margin: "0 auto",
+      paddingTop: "20px"
+    }
   }));
   
 
@@ -92,7 +98,7 @@ function ResponsiveDrawer(props) {
             </div>
             <div className="Drawer-links">
             <NavLink exact activeStyle={{transform: "scale(1.5)"}} to="/portfolio"><h2>Portfolio</h2></NavLink>
-                <h2>Specializations</h2>
+                <h2>My Story</h2>
                 <h2>Get in touch</h2>
             </div>
             <div className="Drawer-links">
@@ -166,7 +172,8 @@ function ResponsiveDrawer(props) {
             <div className={classes.toolbar} />
             
             <div className="Portfolio" style={{position: "relative", zIndex: "6"}}>
-                <h1>Portfolio</h1>
+                <h1 className={classes.title}>Portfolio // Recent Projects</h1>
+                <Divider light />
                 <div className="Portfolio-card-container">
                   {/* <PortfolioCard title="Couleur" image="./assets/Headshot.png"/> 
                   <PortfolioCard title="Sippit" image="./assets/Headshot.png"/>   
@@ -174,10 +181,41 @@ function ResponsiveDrawer(props) {
                   <PortfolioCard title="Lights Out" image="./assets/Headshot.png"/>
                   <PortfolioCard title="Hot Wheels Repo" image="./assets/Headshot.png"/>  */}
                   <PortfolioCard 
+                    title="Couleur" 
+                    image={require("./assets/CardDealerImage.png")} 
+                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
+                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
+                    link="https://zb-react-cards-api.herokuapp.com"/>
+                  <PortfolioCard 
+                    title="Sippit" 
+                    image={require("./assets/CardDealerImage.png")} 
+                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
+                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
+                    link="https://zb-react-cards-api.herokuapp.com"/>
+                  <PortfolioCard 
+                    title="Yahztee" 
+                    image={require("./assets/CardDealerImage.png")} 
+                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
+                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
+                    link="https://zb-react-cards-api.herokuapp.com"/> 
+                  <PortfolioCard 
+                    title="Lights Out" 
+                    image={require("./assets/CardDealerImage.png")} 
+                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
+                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
+                    link="https://zb-react-cards-api.herokuapp.com"/>
+                  <PortfolioCard 
+                    title="Hot Wheels Repo" 
+                    image={require("./assets/CardDealerImage.png")} 
+                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
+                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
+                    link="https://zb-react-cards-api.herokuapp.com"/> 
+                  <PortfolioCard 
                     title="Card Dealer" 
                     image={require("./assets/CardDealerImage.png")} 
-                    text="React" 
-                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}/> 
+                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it mounts." 
+                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
+                    link="https://zb-react-cards-api.herokuapp.com"/>
                 </div>
             </div>
             <div className="stars">
