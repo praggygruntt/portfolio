@@ -13,6 +13,7 @@
 }
 .MuiCardContent-root {
     padding: 8px !important;
+    min-height: 160px;
 }
 .chip-container {
     margin-bottom: 8px;
@@ -34,4 +35,32 @@
     width: 85%;
     margin: 0 auto !important;
     text-align: center;
+}
+.makeStyles-media-134 {
+    height: 200px !important;
+}
+.MuiButtonBase-root {
+    /* padding-top: 0 !important; */
+    box-sizing: border-box;
+}
+.MuiButtonBase-root > span > a {
+    width: 100%;
+}
+.MuiButton-label {
+    height: 100% !important;
+}
+.MuiTypography-h5 {
+    font-family: inherit !important;
+    font-weight: bold !important;
+    box-shadow: inset 0px 0px 5px 0 white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.makeStyles-card-133 {
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-direction: column !important;
+}
+.MuiCardActionArea-root {
+    padding-top: 0px !important;
 }

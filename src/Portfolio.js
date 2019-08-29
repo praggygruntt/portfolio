@@ -182,40 +182,46 @@ function ResponsiveDrawer(props) {
                   <PortfolioCard title="Hot Wheels Repo" image="./assets/Headshot.png"/>  */}
                   <PortfolioCard 
                     title="Couleur" 
-                    image={require("./assets/CardDealerImage.png")} 
-                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
-                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
-                    link="https://zb-react-cards-api.herokuapp.com"/>
+                    image={require("./assets/CouleurImage.png")} 
+                    text="As my capstone project in a React Bootcamp, this color palette design app pulled together many of the technologies and knowledge related to React and Front End Development. Material UI was used as the React UI, React Router allowed client-side routing, and various other libraries polished to the concept." 
+                    chips={["React", "React Router", "Material UI", "Chroma.js", "JSS"]}
+                    link="https://zb-couleur.herokuapp.com/"
+                    githubLink="https://github.com/praggygruntt/Couleur"/>
                   <PortfolioCard 
                     title="Sippit" 
-                    image={require("./assets/CardDealerImage.png")} 
-                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
-                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
-                    link="https://zb-react-cards-api.herokuapp.com"/>
+                    image={require("./assets/SippitImage.png")} 
+                    text="I coined the idea for this App by wanting to try new cocktails, but always resorting to the same ones. The App uses Axios to make external API calls to grab cocktails. The most challenging part was refactoring the local storage access code to function properly once deployed." 
+                    chips={["React", "Axios", "Local Storage", "Component Lifecycle"]}
+                    link="https://zb-sippit.herokuapp.com/"
+                    githubLink="https://github.com/praggygruntt/sippit-cocktail-board"/>
                   <PortfolioCard 
-                    title="Yahztee" 
-                    image={require("./assets/CardDealerImage.png")} 
-                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
-                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
-                    link="https://zb-react-cards-api.herokuapp.com"/> 
+                    title="Yahtzee" 
+                    image={require("./assets/YahtzeeImage.png")} 
+                    text="By rebuilding Yahtzee, I studied complex Javascript logical operations applied to managing the state of the game, dice, and scores. I turned to external resources in order to develop the rules for scoring the Yahztee rolls in Javascript." 
+                    chips={["React", "Complex JS Logic", "State Management", "Data Transfers"]}
+                    link="https://zb-yahtzee.herokuapp.com/"
+                    githubLink="https://github.com/praggygruntt/zb-yahtzee"/> 
                   <PortfolioCard 
-                    title="Lights Out" 
-                    image={require("./assets/CardDealerImage.png")} 
-                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
-                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
-                    link="https://zb-react-cards-api.herokuapp.com"/>
+                    title="Lights Out!" 
+                    image={require("./assets/LightsOutImage.png")} 
+                    text="By cloning the popular game Lights Out into a React App, I practiced working in a collaborative team environment by completing the App's code, written by another developer. I debugged issues with his JS logic for managing the state of the board as well." 
+                    chips={["React", "State Management", "JS Iteration", "Collaborative Workflow"]}
+                    link="https://zb-lights-out-game.herokuapp.com/"
+                    githubLink="https://github.com/praggygruntt/reactLightsOutGame"/>
                   <PortfolioCard 
                     title="Hot Wheels Repo" 
-                    image={require("./assets/CardDealerImage.png")} 
-                    text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it changes over time." 
-                    chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
-                    link="https://zb-react-cards-api.herokuapp.com"/> 
+                    image={require("./assets/HotWheelsRepoImage.png")} 
+                    text="Tapping into my childhood, I made this demo of a neighborhood marketplace for Hot Wheel Cars. I implemented Client-Side Routing via React Router for allowing each Route to be rendered in the browser, as well as made sure to design for mobile-first." 
+                    chips={["React", "React Router", "Client-Side Rendering ", "Responsive Design"]}
+                    link="https://zb-hot-wheels-repo.herokuapp.com"
+                    githubLink="https://github.com/praggygruntt/hot-wheels-repo"/> 
                   <PortfolioCard 
                     title="Card Dealer" 
                     image={require("./assets/CardDealerImage.png")} 
                     text="With this demo, I studied React's Class-based Components, managing the state of the deck within the App. Working with the Component Lifecycle allowed me to implement an API call using Axios to load and track the deck as it mounts." 
                     chips={["React", "Class Components", "Component Lifecycle", "Axios"]}
-                    link="https://zb-react-cards-api.herokuapp.com"/>
+                    link="https://zb-react-cards-api.herokuapp.com"
+                    githubLink="https://github.com/praggygruntt/react-cards-api"/>
                 </div>
             </div>
             <div className="stars">

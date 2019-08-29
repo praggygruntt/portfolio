@@ -15,12 +15,12 @@
 }
 .fade-enter-active {
   opacity: 1;
-  transition: opacity 700ms ease;
+  transition: opacity 1000ms ease;
 }
 .fade-exit {
   opacity: 1;
 }
 .fade-exit-active {
   opacity: 0;
-  transition: opacity 700ms ease;
+  transition: opacity 1000ms ease;
 }

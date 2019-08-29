@@ -16,34 +16,40 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const useStyles = makeStyles({
   card: {
     maxWidth: 385,
+    minWidth: 300,
     display: "block",
     marginTop: "1rem",
     background: "#353535",
-    border: "1px solid rgba(255, 255, 255, .36)",
+    border: "1px solid rgba(255, 255, 255, .8)",
     color: "white",
     marginRight: "10px",
     marginLeft: "10px",
-    marginBottom: "15px"
+    marginBottom: "15px",
+    boxShadow: "inset 0px 0px 5px 2px rgba(255,255,255,.2)"
   },
   media: {
-    height: 140,
+    height: "200px",
   },
   textContent: {
       fontSize: ".9rem",
-      color: "white"
+      color: "white",
+      fontFamily: "inherit !important",
+      minHeight: "147px "
+  },
+  githubLink: {
+    padding: "10px 0px !important"
   }
 });
 
 export default function PortfolioCard(props) {
   const classes = useStyles();
-    const {title, image, chips, text, link} = props;
+    const {title, image, chips, text, link, githubLink} = props;
     console.log(chips);
     const mappedChips = chips.map(chip => <Chip label={chip} key={chip} />)
   return (
     <Card className={classes.card}>
-      <CardActionArea className={classes.cardAction}>
+      <CardActionArea className={classes.cardAction} href={link} target="_blank" rel="noopener noreferrer">
         <CardMedia
-
           className={classes.media}
           image={image}
         />
@@ -61,8 +67,8 @@ export default function PortfolioCard(props) {
         <div className="chip-container" style={{display: "block", width: "100%"}}>
           {mappedChips}
         </div>
-        <Button size="small" color="default">
-          <a href={link} target="_blank" rel="noopener noreferrer" style={{color: "inherit", textDecoration: "none"}}>View on Github <FontAwesomeIcon size="lg" icon={faGithub}/></a>
+        <Button size="small" color="default" className={classes.githubLink}>
+          <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{color: "inherit", textDecoration: "none"}}>View on Github <FontAwesomeIcon size="lg" icon={faGithub}/></a>
         </Button>
       </CardActions>
     </Card>

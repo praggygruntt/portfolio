@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import Welcome from './Welcome';
 import Portfolio from './Portfolio';
@@ -14,7 +14,7 @@ function App() {
       <Route 
         render={({location}) => (
           <TransitionGroup>
-            <CSSTransition key={location.key} classNames="fade" timeout={700}>
+            <CSSTransition key={location.key} classNames="fade" timeout={1000}>
             <Switch location={location}>
               <Route
                 exact
@@ -26,8 +26,9 @@ function App() {
                 path="/portfolio"
                 render={(routeProps) => <Portfolio />}
               />
-              <Route
-                render={(routeProps) => <Welcome />}
+              <Redirect
+                exact
+                to="/"/>}
               />
             </Switch>
             </CSSTransition>
