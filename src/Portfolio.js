@@ -12,7 +12,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import {faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
 import {Link, NavLink} from 'react-router-dom';
 import PortfolioCard from './PortfolioCard';
 import {Divider} from '@material-ui/core';
@@ -73,7 +72,7 @@ const useStyles = makeStyles(theme => ({
   }));
   
 
-function ResponsiveDrawer(props) {
+function Portfolio(props) {
     const { container } = props;
     const classes = useStyles();
     const theme = useTheme();
@@ -97,9 +96,9 @@ function ResponsiveDrawer(props) {
                 <h2 style={{fontWeight: "200"}}>Front-End Web Developer</h2>
             </div>
             <div className="Drawer-links">
-            <NavLink exact activeStyle={{transform: "scale(1.5)"}} to="/portfolio"><h2>Portfolio</h2></NavLink>
-                <h2>My Story</h2>
-                <h2>Get in touch</h2>
+                <NavLink exact activeClassName="active" to="/portfolio"><h2>Portfolio</h2></NavLink>
+                <NavLink exact activeClassName="active" to="/about"><h2>My Story</h2></NavLink>
+                <NavLink exact activeClassName="active" to="/contact"><h2>GET IN TOUCH</h2></NavLink>
             </div>
             <div className="Drawer-links">
             <div className="Drawer-links-single-container">
@@ -110,10 +109,10 @@ function ResponsiveDrawer(props) {
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.linkedin.com/in/zacharybbowman/"><h2 style={{marginRight: "3%"}}>LinkedIn</h2></a>
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.linkedin.com/in/zacharybbowman/"><FontAwesomeIcon size="lg" icon={faLinkedin}/></a>
                 </div> 
-                <div className="Drawer-links-single-container">
+                {/* <div className="Drawer-links-single-container">
                     <h2 style={{marginRight: "3%"}}>zchrybwmn@gmail.com</h2>
                     <FontAwesomeIcon size="lg" icon={faEnvelopeOpenText}/>
-                </div> 
+                </div>  */}
             </div>
         </div>
       </div>
@@ -224,17 +223,17 @@ function ResponsiveDrawer(props) {
                     githubLink="https://github.com/praggygruntt/react-cards-api"/>
                 </div>
             </div>
-            <div className="stars">
+            {/* <div className="stars">
               <div id='stars'></div>
               <div id='stars2'></div>
               <div id='stars3'></div>
-            </div>
+            </div> */}
         </main>
       </div>
     );
   }
   
-  ResponsiveDrawer.propTypes = {
+  Portfolio.propTypes = {
     /**
      * Injected by the documentation to work in an iframe.
      * You won't need it on your project.
@@ -242,4 +241,4 @@ function ResponsiveDrawer(props) {
     container: PropTypes.instanceOf(typeof Element === 'undefined' ? Object : Element),
   };
   
-  export default ResponsiveDrawer;
+  export default Portfolio;

@@ -3,7 +3,7 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import Welcome from './Welcome';
 import Portfolio from './Portfolio';
-
+import Contact from './Contact';
 
 import './App.css';
 
@@ -25,6 +25,11 @@ function App() {
                 exact
                 path="/portfolio"
                 render={(routeProps) => <Portfolio />}
+              />
+              <Route
+                exact
+                path="/contact"
+                render={(routeProps) => <Contact />}
               />
               <Redirect
                 exact

@@ -19,13 +19,13 @@ const useStyles = makeStyles({
     minWidth: 300,
     display: "block",
     marginTop: "1rem",
-    background: "#353535",
+    background: "black",
     border: "1px solid rgba(255, 255, 255, .8)",
     color: "white",
     marginRight: "10px",
     marginLeft: "10px",
     marginBottom: "15px",
-    boxShadow: "inset 0px 0px 5px 2px rgba(255,255,255,.2)"
+    boxShadow: "inset 0px 0px 10px 2px rgba(255, 255, 255, 0.44)"
   },
   media: {
     height: "200px",

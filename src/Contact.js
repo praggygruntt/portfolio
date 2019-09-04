@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
@@ -13,11 +12,23 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-
-import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
-import CallIcon from '@material-ui/icons/Call';
 import {Link, NavLink} from 'react-router-dom';
+import PortfolioCard from './PortfolioCard';
+import EmailIcon from '@material-ui/icons/Email';
+import PhoneIcon from '@material-ui/icons/Phone';
+import {Divider} from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
+import {Card} from '@material-ui/core';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import {Send} from '@material-ui/icons';
+
+
 import './Welcome.css';
+import './Portfolio.css';
+import './Contact.css';
 
 import headshot from './assets/Headshot.png';
 
@@ -25,53 +36,60 @@ import headshot from './assets/Headshot.png';
 const drawerWidth = 320;
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-  },
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
+    root: {
+      display: 'flex',
+    },
+    drawer: {
+      [theme.breakpoints.up('sm')]: {
+        width: drawerWidth,
+        flexShrink: 0,
+      },
+    },
+    divider: {
+        color: "white"
+    },
+    appBar: {
+      marginLeft: drawerWidth,
+      [theme.breakpoints.up('sm')]: {
+        width: `calc(100% - ${drawerWidth}px)`,
+      },
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+      [theme.breakpoints.up('sm')]: {
+        display: 'none',
+      },
+    },
+    toolbar: {
+        ...theme.mixins.toolbar
+      },
+    drawerPaper: {
       width: drawerWidth,
-      flexShrink: 0,
+      backgroundImage: "url(https://images.unsplash.com/photo-1526835230578-c62e8ff3c52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)",
+      backgroundSize: "cover",
+      backgroundPosition: "-15px"
     },
-  },
-  divider: {
-      color: "white"
-  },
-  appBar: {
-    marginLeft: drawerWidth,
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-    },
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
-  },
-  toolbar: {
-      ...theme.mixins.toolbar
-    },
-  drawerPaper: {
-    width: drawerWidth,
-    backgroundImage: "url(https://images.unsplash.com/photo-1526835230578-c62e8ff3c52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)",
-    backgroundPosition: "-15px",
-    backgroundSize: "cover"
-  },
-  content: {
-    // flexGrow: 1,
-    // padding: theme.spacing(3),
-    width: "70%",
-    height: "100vh",
-  },
-  "@media (max-width: 600px)": {
     content: {
-      width: "100%"
+      // flexGrow: 1,
+      // padding: theme.spacing(3),
+      width: "100%",
+      height: "100vh"
+    },
+    title: {
+      fontSize: "3rem",
+      margin: "0 auto",
+      paddingTop: "20px",
+      color: "white"
+    },
+    contactCard: {
+      background: "black !important",
+      boxShadow: "inset 0px 0px 10px 2px rgba(255, 255, 255, 0.44)",
+      border: "1px solid rgba(255, 255, 255, .8)"
     }
-  }
-}));
+  }));
+  
 
-function Welcome(props) {
+function Contact(props) {
     const { container } = props;
     const classes = useStyles();
     const theme = useTheme();
@@ -90,7 +108,7 @@ function Welcome(props) {
         </div>
         <div style={{background: "rgba(0,3,29,.7)", height: "100%"}}>
             <div className="Drawer-namecard">
-                <img src={headshot} alt="Zachary Bowman Headshot"/>
+                <Link to="/"><img src={headshot} alt="Zachary Bowman Headshot"/></Link>
                 <h1 style={{fontWeight: "700"}}>Zachary Bowman</h1>
                 <h2 style={{fontWeight: "200"}}>Front-End Web Developer</h2>
             </div>
@@ -100,7 +118,7 @@ function Welcome(props) {
                 <NavLink exact activeClassName="active" to="/contact"><h2>GET IN TOUCH</h2></NavLink>
             </div>
             <div className="Drawer-links">
-                <div className="Drawer-links-single-container">
+            <div className="Drawer-links-single-container">
                     <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.github.com/praggygruntt"><h2 style={{marginRight: "3%"}}>Github</h2></a>
                     <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.github.com/praggygruntt"><FontAwesomeIcon size="lg" icon={faGithub}/></a>
                 </div>       
@@ -117,7 +135,13 @@ function Welcome(props) {
       </div>
     );
     return (
+      
       <div className={classes.root}>
+        <div className="stars">
+              <div id='stars'></div>
+              <div id='stars2'></div>
+              <div id='stars3'></div>
+            </div>  
         <CssBaseline />
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
@@ -168,26 +192,38 @@ function Welcome(props) {
         </nav>
         <main className={classes.content}>
             <div className={classes.toolbar} />
-            <div className="stars">
-              <div id='stars'></div>
-              <div id='stars2'></div>
-              <div id='stars3'></div>
+            
+            <div className="Contact">
+                  <h1>Let's Create<br></br>Something Together!</h1>
+                  <h2>If you like my journey so far, just send me an email or feel free to call me! I can't wait to see what we make together. </h2>
+                  <div style={{display: "flex", justifyContent: "center"}}>
+                  <a className="Contact-link" href="mailto:zchrybwmn@gmail.com" style={{marginRight: "20px"}}>
+                    <div style={{display: "flex", alignItems: "center"}}>
+                      <Send fontSize="large"/>
+                    </div>
+                    <div>
+                      <h3>Email</h3>
+                      <h4>24/7</h4>
+                    </div>
+                  </a>
+                  <a className="Contact-link" href="tel:+13174898185">
+                    <div style={{display: "flex", alignItems: "center"}}>
+                      <PhoneIcon fontSize="large"/>
+                    </div>
+                    <div>
+                      <h3>Call</h3>
+                      <h4>8am-4pm EDT</h4>
+                    </div>
+                    
+                  </a></div>
             </div>
-            <div className="hero">
-              <h1>Hi, I'm Zach!</h1>
-              <h3>I'm a web developer specializing in</h3>
-              <h2>React.js front-end development.</h2>
-            </div>
-            <div className="hero-buttons">
-              <Link to="/portfolio" className="hero-buttons-button">PORTFOLIO <CollectionsBookmarkIcon /></Link>
-              <Link to="/contact" className="hero-buttons-button">DROP A LINE <CallIcon /></Link>
-            </div>
+            
         </main>
       </div>
     );
   }
   
-  Welcome.propTypes = {
+  Contact.propTypes = {
     /**
      * Injected by the documentation to work in an iframe.
      * You won't need it on your project.
@@ -195,4 +231,4 @@ function Welcome(props) {
     container: PropTypes.instanceOf(typeof Element === 'undefined' ? Object : Element),
   };
   
-  export default Welcome;
+  export default Contact;

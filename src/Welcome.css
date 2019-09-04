@@ -63,7 +63,8 @@ button {
   text-decoration: none;
 }
 .Drawer-links a:hover > h2 {
-  font-weight: bold;
+  transform: translateY(-2px);
+  transition: all .2s ease-in-out;
 }
 .Drawer-links-single-container {
     display: flex;
@@ -177,9 +178,12 @@ button {
   
 }
 .hero-buttons-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   text-decoration: none;
-  width: 150px;
+  width: 200px;
   margin-top: 15px;
   background: linear-gradient(45deg, #000744, #1a2fe4);
   color: white;

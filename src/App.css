@@ -9,6 +9,7 @@
   background-position: bottom right;
   font-family: "Montserrat", sans-serif;
   overflow: scroll;
+  color: white;
 }
 .fade-enter {
   opacity: 0;
