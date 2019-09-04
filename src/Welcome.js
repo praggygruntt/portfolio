@@ -96,7 +96,7 @@ function Welcome(props) {
             </div>
             <div className="Drawer-links">
                 <NavLink exact activeClassName="active" to="/portfolio"><h2>Portfolio</h2></NavLink>
-                <NavLink exact activeClassName="active" to="/about"><h2>My Story</h2></NavLink>
+                <NavLink exact activeClassName="active" to="/story"><h2>My Story</h2></NavLink>
                 <NavLink exact activeClassName="active" to="/contact"><h2>GET IN TOUCH</h2></NavLink>
             </div>
             <div className="Drawer-links">

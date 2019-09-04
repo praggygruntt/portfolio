@@ -11,3 +11,8 @@
     overflow: scroll;
     margin-top: 20px;
 }
+@media all and (max-width: 450px) {
+    h1.makeStyles-toolbar-243 {
+        font-size: 2rem !important;
+    }
+}

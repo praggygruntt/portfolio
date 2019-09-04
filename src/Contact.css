@@ -8,13 +8,21 @@
     margin: 0 auto;
     flex-direction: column;
     padding: 5rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
-
+.Contact-buttons {
+    display: flex;
+    justify-content: center;
+}
 .Contact h2 {
     width: 60%;
     font-weight: 300;
     margin-bottom: 50px;
     line-height: 40px;
+}
+#first-contact-link {
+    margin-right: 20px;
 }
 .Contact-link {
     color: white;
@@ -23,11 +31,12 @@
     justify-content: space-between;
     border: 1px solid white;
     font-size: 1.5rem;
-    background: #0033f1;
-    width: 200px;
+    background: linear-gradient(45deg, #111f96, #0033f1);
+    width: 180px;
     padding: 10px 20px;
     border-radius: 4px;
     transition: all .5s ease;
+    box-sizing: content-box;
 }
 .Contact-link:hover {
     color: #0033f1;
@@ -84,3 +93,26 @@ a.contactA svg {
     color: white !important;
     box-shadow: inset 0px 0px 10px 2px rgba(255, 255, 255, 0.44) !important;
 } */
+
+@media all and (max-width: 906px) {
+    .Contact {
+        padding: 5px;
+    }
+}
+@media all and (max-width: 762px) {
+    .Contact h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .Contact-buttons {
+        display: block;
+    }
+    #first-contact-link {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    .Contact h2 {
+        margin-bottom: 25px;
+        width: 90%;
+    }
+}

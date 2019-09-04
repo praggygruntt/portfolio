@@ -4,6 +4,7 @@ import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import Welcome from './Welcome';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Story from './Story';
 
 import './App.css';
 
@@ -30,6 +31,11 @@ function App() {
                 exact
                 path="/contact"
                 render={(routeProps) => <Contact />}
+              />
+              <Route
+                exact
+                path="/story"
+                render={(routeProps) => <Story />}
               />
               <Redirect
                 exact

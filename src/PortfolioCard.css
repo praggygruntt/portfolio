@@ -1,11 +1,14 @@
 .MuiButton-root {
     color: white !important;
-    background-color: #000744 !important;
+    background-color: #0033f1 !important;
     padding: 10px !important;
     width: 100%;
+    transition: all .5s ease;
 }
 .MuiButton-root:hover {
-    background-color: #071698 !important;
+    background-color: white !important;
+    color: #0033f1 !important;
+    transition: all .5s ease;
 }
 .MuiCardActions-root {
   flex-direction: column;
@@ -25,7 +28,7 @@
     color: white !important;
     height: 20px !important;
     margin: 5px;
-    background: #000744 !important;
+    background: #0033f1 !important;
     letter-spacing: 1px;
     font-weight: 300;
     padding: 2px !important;    

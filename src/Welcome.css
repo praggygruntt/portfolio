@@ -185,19 +185,23 @@ button {
   text-decoration: none;
   width: 200px;
   margin-top: 15px;
-  background: linear-gradient(45deg, #000744, #1a2fe4);
+  background: linear-gradient(45deg, #111f96, #0033f1);
   color: white;
+  border-radius: 4px;
   cursor: pointer;
   padding: 1rem;
   letter-spacing: 2px;
   border: 1px solid white;
   font-weight: bold !important;
+  transition: all .5s ease;
 }
 .hero-buttons-button:focus {
   outline: none;
 }
 .hero-buttons-button:hover {
-  background: linear-gradient(45deg, #061386, #3246f3);
+  background: white;
+  color: #0033f1;
+  transition: all .5s ease;
 }
 .hero-buttons-button:active {
   background: linear-gradient(45deg, #000744, #1a2fe4);

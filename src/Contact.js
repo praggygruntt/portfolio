@@ -23,7 +23,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import {Send} from '@material-ui/icons';
+import {Send, Textsms} from '@material-ui/icons';
 
 
 import './Welcome.css';
@@ -114,7 +114,7 @@ function Contact(props) {
             </div>
             <div className="Drawer-links">
                 <NavLink exact activeClassName="active" to="/portfolio"><h2>Portfolio</h2></NavLink>
-                <NavLink exact activeClassName="active" to="/about"><h2>My Story</h2></NavLink>
+                <NavLink exact activeClassName="active" to="/story"><h2>My Story</h2></NavLink>
                 <NavLink exact activeClassName="active" to="/contact"><h2>GET IN TOUCH</h2></NavLink>
             </div>
             <div className="Drawer-links">
@@ -196,26 +196,27 @@ function Contact(props) {
             <div className="Contact">
                   <h1>Let's Create<br></br>Something Together!</h1>
                   <h2>If you like my journey so far, just send me an email or feel free to call me! I can't wait to see what we make together. </h2>
-                  <div style={{display: "flex", justifyContent: "center"}}>
-                  <a className="Contact-link" href="mailto:zchrybwmn@gmail.com" style={{marginRight: "20px"}}>
-                    <div style={{display: "flex", alignItems: "center"}}>
-                      <Send fontSize="large"/>
-                    </div>
-                    <div>
-                      <h3>Email</h3>
-                      <h4>24/7</h4>
-                    </div>
-                  </a>
-                  <a className="Contact-link" href="tel:+13174898185">
-                    <div style={{display: "flex", alignItems: "center"}}>
-                      <PhoneIcon fontSize="large"/>
-                    </div>
-                    <div>
-                      <h3>Call</h3>
-                      <h4>8am-4pm EDT</h4>
-                    </div>
-                    
-                  </a></div>
+                  <div className="Contact-buttons">
+                    <a id="first-contact-link" className="Contact-link" href="mailto:zchrybwmn@gmail.com">
+                      <div style={{display: "flex", alignItems: "center"}}>
+                        <Send fontSize="large"/>
+                      </div>
+                      <div style={{textAlign: "right"}}>
+                        <h3>Email</h3>
+                        <h4>zchrybwmn@gmail.com</h4>
+                      </div>
+                    </a>
+                    <a className="Contact-link" href="sms:+13174898185">
+                      <div style={{display: "flex", alignItems: "center"}}>
+                        <Textsms fontSize="large"/>
+                      </div>
+                      <div style={{textAlign: "right"}}>
+                        <h3>Text</h3>
+                        <h4>+1 (317) 489 - 8185</h4>
+                      </div>
+                      
+                    </a>
+                  </div>
             </div>
             
         </main>
