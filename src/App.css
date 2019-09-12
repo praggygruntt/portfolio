@@ -7,7 +7,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: bottom right;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   overflow: scroll;
   color: white;
 }

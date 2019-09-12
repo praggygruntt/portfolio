@@ -55,7 +55,7 @@
 .MuiTypography-h5 {
     font-family: inherit !important;
     font-weight: bold !important;
-    box-shadow: inset 0px 0px 5px 0 white;
+    /* box-shadow: inset 0px 0px 5px 0 white; */
     padding: 5px;
     border-radius: 5px;
 }

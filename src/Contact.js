@@ -11,20 +11,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import {Link, NavLink} from 'react-router-dom';
-import PortfolioCard from './PortfolioCard';
-import EmailIcon from '@material-ui/icons/Email';
-import PhoneIcon from '@material-ui/icons/Phone';
 import {Divider} from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
-import {Card} from '@material-ui/core';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import {Send, Textsms} from '@material-ui/icons';
-
 
 import './Welcome.css';
 import './Portfolio.css';
@@ -125,6 +115,10 @@ function Contact(props) {
                 <div className="Drawer-links-single-container">
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.linkedin.com/in/zacharybbowman/"><h2 style={{marginRight: "3%"}}>LinkedIn</h2></a>
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.linkedin.com/in/zacharybbowman/"><FontAwesomeIcon size="lg" icon={faLinkedin}/></a>
+                </div>
+                <div className="Drawer-links-single-container">
+                  <a target="_blank"  rel="noopener noreferrer" style={{width: "100%",textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><h2 style={{marginRight: "3%"}}>Stack Overflow</h2></a>
+                  <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><FontAwesomeIcon size="lg" icon={faStackOverflow}/></a>
                 </div> 
                 {/* <div className="Drawer-links-single-container">
                     <h2 style={{marginRight: "3%"}}>zchrybwmn@gmail.com</h2>
@@ -195,7 +189,8 @@ function Contact(props) {
             
             <div className="Contact">
                   <h1>Let's Create<br></br>Something Together!</h1>
-                  <h2>If you like my journey so far, just send me an email or feel free to call me! I can't wait to see what we make together. </h2>
+                  <Divider />
+                  <h2>If you like my journey so far, just send me an email or feel free to text me for quick questions! I can't wait to see what we make together. </h2>
                   <div className="Contact-buttons">
                     <a id="first-contact-link" className="Contact-link" href="mailto:zchrybwmn@gmail.com">
                       <div style={{display: "flex", alignItems: "center"}}>

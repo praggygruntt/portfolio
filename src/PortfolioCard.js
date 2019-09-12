@@ -19,13 +19,13 @@ const useStyles = makeStyles({
     minWidth: 300,
     display: "block",
     marginTop: "1rem",
-    background: "black",
+    background: "#131313",
     border: "1px solid rgba(255, 255, 255, .8)",
     color: "white",
     marginRight: "10px",
     marginLeft: "10px",
     marginBottom: "15px",
-    boxShadow: "inset 0px 0px 10px 2px rgba(255, 255, 255, 0.44)"
+    // boxShadow: "inset 0px 0px 10px 5px rgba(255, 255, 255, 0.1)"
   },
   media: {
     height: "200px",
@@ -44,7 +44,6 @@ const useStyles = makeStyles({
 export default function PortfolioCard(props) {
   const classes = useStyles();
     const {title, image, chips, text, link, githubLink} = props;
-    console.log(chips);
     const mappedChips = chips.map(chip => <Chip label={chip} key={chip} />)
   return (
     <Card className={classes.card}>

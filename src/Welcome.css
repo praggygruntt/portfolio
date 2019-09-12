@@ -1,3 +1,4 @@
+
 .iframe {
   position: absolute;
   right: 0;
@@ -24,6 +25,9 @@
 .MuiDrawer-paperAnchorDockedLeft {
     border: none !important;
 }
+/* .MuiDrawer-paperAnchorLeft {
+  left: inherit !important; 
+} */
 svg:hover {
     cursor: pointer;
 }
@@ -47,7 +51,7 @@ button {
     margin: 10px auto;
 }
 .Drawer-namecard h2, .Drawer-links h2 {
-    font-size: .9rem;
+    font-size: .9rem !important;
 }
 .Drawer-namecard img {
     width: 50%;
@@ -62,9 +66,11 @@ button {
   color: white !important;
   text-decoration: none;
 }
-.Drawer-links a:hover > h2 {
+.Drawer-links a:hover > h2,
+.Drawer-links a:hover > svg  {
   transform: translateY(-2px);
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
+  text-decoration: underline;
 }
 .Drawer-links-single-container {
     display: flex;

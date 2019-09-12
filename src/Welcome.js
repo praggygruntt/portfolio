@@ -12,7 +12,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 
 import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
 import CallIcon from '@material-ui/icons/Call';
@@ -97,7 +97,7 @@ function Welcome(props) {
             <div className="Drawer-links">
                 <NavLink exact activeClassName="active" to="/portfolio"><h2>Portfolio</h2></NavLink>
                 <NavLink exact activeClassName="active" to="/story"><h2>My Story</h2></NavLink>
-                <NavLink exact activeClassName="active" to="/contact"><h2>GET IN TOUCH</h2></NavLink>
+                <NavLink exact activeClassName="active" to="/contact"><h2>Get in Touch</h2></NavLink>
             </div>
             <div className="Drawer-links">
                 <div className="Drawer-links-single-container">
@@ -107,6 +107,10 @@ function Welcome(props) {
                 <div className="Drawer-links-single-container">
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://www.linkedin.com/in/zacharybbowman/"><h2 style={{marginRight: "3%"}}>LinkedIn</h2></a>
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "10px"}}href="https://www.linkedin.com/in/zacharybbowman/"><FontAwesomeIcon size="lg" icon={faLinkedin}/></a>
+                </div>
+                <div className="Drawer-links-single-container">
+                  <a target="_blank"  rel="noopener noreferrer" style={{width: "100%", textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><h2 style={{marginRight: "3%"}}>Stack Overflow</h2></a>
+                  <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><FontAwesomeIcon size="lg" icon={faStackOverflow}/></a>
                 </div> 
                 {/* <div className="Drawer-links-single-container">
                     <h2 style={{marginRight: "3%"}}>zchrybwmn@gmail.com</h2>
@@ -176,7 +180,8 @@ function Welcome(props) {
             <div className="hero">
               <h1>Hi, I'm Zach!</h1>
               <h3>I'm a web developer specializing in</h3>
-              <h2>React.js front-end development.</h2>
+              <h2>React.js Front-End Web Development</h2>
+              <h3>with a touch of UI/UX Design.</h3>
             </div>
             <div className="hero-buttons">
               <Link to="/portfolio" className="hero-buttons-button">PORTFOLIO <CollectionsBookmarkIcon /></Link>
