@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     display: "block",
     marginTop: "1rem",
     background: "#131313",
-    border: "1px solid rgba(255, 255, 255, .8)",
+    border: "1px solid rgba(255, 255, 255, .3)",
     color: "white",
     marginRight: "10px",
     marginLeft: "10px",

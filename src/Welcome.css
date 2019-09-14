@@ -28,6 +28,9 @@
 /* .MuiDrawer-paperAnchorLeft {
   left: inherit !important; 
 } */
+svg {
+  cursor: pointer;
+}
 svg:hover {
     cursor: pointer;
 }
@@ -71,6 +74,7 @@ button {
   transform: translateY(-2px);
   transition: all .1s ease-in-out;
   text-decoration: underline;
+  color: #00c0ff;
 }
 .Drawer-links-single-container {
     display: flex;

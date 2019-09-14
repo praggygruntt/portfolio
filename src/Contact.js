@@ -15,6 +15,7 @@ import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-
 import {Link, NavLink} from 'react-router-dom';
 import {Divider} from '@material-ui/core';
 import {Send, Textsms} from '@material-ui/icons';
+import {faFileAlt} from '@fortawesome/free-solid-svg-icons';
 
 import './Welcome.css';
 import './Portfolio.css';
@@ -119,6 +120,10 @@ function Contact(props) {
                 <div className="Drawer-links-single-container">
                   <a target="_blank"  rel="noopener noreferrer" style={{width: "100%",textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><h2 style={{marginRight: "3%"}}>Stack Overflow</h2></a>
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><FontAwesomeIcon size="lg" icon={faStackOverflow}/></a>
+                </div>
+                <div className="Drawer-links-single-container">
+                  <a target="_blank"  rel="noopener noreferrer" style={{width: "100%", textDecoration: "none", color: "inherit", margin: "inherit"}}href={require("./assets/zbResume07-14-19.pdf")}><h2 style={{marginRight: "3%"}}>Resume</h2></a>
+                  <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}} href={require("./assets/zbResume07-14-19.pdf")}><FontAwesomeIcon size="lg" icon={faFileAlt}/></a>
                 </div> 
                 {/* <div className="Drawer-links-single-container">
                     <h2 style={{marginRight: "3%"}}>zchrybwmn@gmail.com</h2>

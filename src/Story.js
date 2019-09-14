@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Divider from '@material-ui/core/Divider';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -14,7 +15,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import {Link, NavLink} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
-import {faHistory, faCode, faTools, faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
+import {faTools, faQuoteLeft, faQuoteRight, faSchool, faLightbulb, faFileAlt} from '@fortawesome/free-solid-svg-icons';
 
 import './Welcome.css';
 import './Portfolio.css';
@@ -119,6 +120,10 @@ function Story(props) {
                 <div className="Drawer-links-single-container">
                   <a target="_blank"  rel="noopener noreferrer" style={{width: "100%",textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><h2 style={{marginRight: "3%"}}>Stack Overflow</h2></a>
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><FontAwesomeIcon size="lg" icon={faStackOverflow}/></a>
+                </div>
+                <div className="Drawer-links-single-container">
+                  <a target="_blank"  rel="noopener noreferrer" style={{width: "100%", textDecoration: "none", color: "inherit", margin: "inherit"}}href={require("./assets/zbResume07-14-19.pdf")}><h2 style={{marginRight: "3%"}}>Resume</h2></a>
+                  <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}} href={require("./assets/zbResume07-14-19.pdf")}><FontAwesomeIcon size="lg" icon={faFileAlt}/></a>
                 </div> 
                 {/* <div className="Drawer-links-single-container">
                     <h2 style={{marginRight: "3%"}}>zchrybwmn@gmail.com</h2>
@@ -189,7 +194,8 @@ function Story(props) {
               <Container fluid className="Story-paper">
                 <Row className="Story-elevator">
                   <Col>
-                    <h1 className="title">The American Dream, One Line at a Time</h1>
+                    <h1 className="title">The American Dream, One Line at a Time...</h1>
+                    <Divider light />
                     <div className="blockquote-container">
                       <FontAwesomeIcon icon={faQuoteLeft} size="2x" className="quote quoteLeft"/>
                       <blockquote>The ideal by which equality of opportunity is available to any American, allowing the highest aspirations and goals to be achieved.</blockquote>
@@ -200,17 +206,17 @@ function Story(props) {
                         <img alt="zach rock climbing" src={require("./assets/climbing.jpg")}></img>
                       </div>
                       <p className="story">
-                        <strong style={{color: "#00c0ff"}}>Hello again, Zach here!</strong> <br></br>Since beginning my coding journey with my first Minecraft server many years ago, I knew I had a <u>logic-based mindset</u> . That mindset led me to pursue Law throughout my undergrad, but something still felt empty. So, I made the choice to take the reins of my career and pull back in to the world I truly wanted. Since then, my journey has been nothing but the American Dream, navigating logistical and financial constraints to make that dream a reality. <br></br><em style={{color: "#00c0ff"}}>Check out more of my journey below, and feel free to drop me a line!</em>
+                        <strong style={{color: "#00c0ff", fontSize: "1.5rem"}}>Hello again, Zach here!</strong> <br></br>Since beginning my coding journey with my first Minecraft server many years ago, I knew I had a <u>logic-based mindset</u> . That mindset led me to pursue Law throughout my undergrad, but something still felt empty. So, I made the choice to take the reins of my career and pull back in to the world I truly wanted. Since then, my journey has been nothing but the American Dream, navigating logistical and financial constraints to make that dream a reality. <br></br><em style={{color: "#00c0ff"}}>Check out more of my journey below, and feel free to drop me a line!</em>
                       </p>
                       <div className="image2">
-                        <img alt="happy zach with a girl" src={require("./assets/happyZ.jpg")}></img>
+                        <img alt="happy zach with a girl  " src={require("./assets/happyZ.jpg")}></img>
                       </div>
                     </div>
                   </Col>
                 </Row>
                 <Row className="Story-tools">
                   <Col xl className="tools-col">
-                    <FontAwesomeIcon icon={faHistory} className="Story-icon" size="3x"/>
+                    <FontAwesomeIcon icon={faSchool} className="Story-icon" size="3x"/>
                     <h2 style={{fontWeight: "bold", textTransform: "uppercase", letterSpacing: "2px", color: "#00c0ff"}}>Education</h2>
                     <p className="Story-tools-excerpt">Knowledge is a journey, not a destination; I can never stop learning. That being said, here are some of my sources of education and continued growth.</p>
                     <h4 className="Story-tools-list-title" style={{color: "#00c0ff"}}>Sources of my Education:</h4>
@@ -227,7 +233,7 @@ function Story(props) {
                     </ul>
                   </Col>
                   <Col xl className="tools-col">
-                    <FontAwesomeIcon icon={faCode} className="Story-icon" size="3x"/>
+                    <FontAwesomeIcon icon={faTools} className="Story-icon" size="3x"/>
                     <h2 style={{fontWeight: "bold", textTransform: "uppercase", letterSpacing: "2px", color: "#00c0ff"}}>Current Work</h2>
                     <p className="Story-tools-excerpt"> I genernally enjoy building front-end applications with React, but enjoy the opportunities to use new open-source technologies as they premier in my development as well.</p>
                     <h4 className="Story-tools-list-title" style={{color: "#00c0ff"}}>Technologies I enjoy: </h4>
@@ -242,7 +248,7 @@ function Story(props) {
                     </ul>
                   </Col>
                   <Col xl className="tools-col">
-                    <FontAwesomeIcon icon={faTools} className="Story-icon"size="3x"/>
+                    <FontAwesomeIcon icon={faLightbulb} className="Story-icon"size="3x"/>
                     <h2 style={{fontWeight: "bold", textTransform: "uppercase", letterSpacing: "2px", color: "#00c0ff"}}>Aspirations</h2>
                     <p className="Story-tools-excerpt">My journey does not stop here. The world of web development is only growing, and my thirst for knowledge keeps me involved in the latest trends in tech.</p>
                     <h4 className="Story-tools-list-title" style={{color: "#00c0ff"}}>I am excited by: </h4>

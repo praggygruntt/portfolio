@@ -11,6 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faFileAlt} from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import {Link, NavLink} from 'react-router-dom';
 import PortfolioCard from './PortfolioCard';
@@ -122,6 +123,10 @@ function Portfolio(props) {
                   <a target="_blank"  rel="noopener noreferrer" style={{width: "100%",textDecoration: "none", color: "inherit", margin: "inherit"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><h2 style={{marginRight: "3%"}}>Stack Overflow</h2></a>
                   <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}}href="https://stackoverflow.com/users/10676693/praggygruntt?tab=profile"><FontAwesomeIcon size="lg" icon={faStackOverflow}/></a>
                 </div> 
+                <div className="Drawer-links-single-container">
+                  <a target="_blank"  rel="noopener noreferrer" style={{width: "100%", textDecoration: "none", color: "inherit", margin: "inherit"}}href={require("./assets/zbResume07-14-19.pdf")}><h2 style={{marginRight: "3%"}}>Resume</h2></a>
+                  <a target="_blank"  rel="noopener noreferrer" style={{textDecoration: "none", color: "inherit", marginLeft: "5px"}} href={require("./assets/zbResume07-14-19.pdf")}><FontAwesomeIcon size="lg" icon={faFileAlt}/></a>
+                </div> 
                 {/* <div className="Drawer-links-single-container">
                     <h2 style={{marginRight: "3%"}}>zchrybwmn@gmail.com</h2>
                     <FontAwesomeIcon size="lg" icon={faEnvelopeOpenText}/>
@@ -223,7 +228,7 @@ function Portfolio(props) {
                   <PortfolioCard 
                     title="Hot Wheels Repo" 
                     image={require("./assets/HotWheelsRepoImage.png")} 
-                    text="Tapping into my childhood, I made this demo of a neighborhood marketplace for Hot Wheel Cars. I implemented Client-Side Routing via React Router for allowing each Route to be rendered in the browser, as well as made sure to design for mobile-first." 
+                    text="Tapping into my childhood, I made this demo of a neighborhood marketplace for Hot Wheel Cars. I implemented Client-Side Routing via React Router for allowing each Route to be rendered in the browser, as well as implemented a back-end API." 
                     chips={["React", "React Router", "Client-Side Rendering ", "Responsive Design"]}
                     link="https://zb-hot-wheels-repo.herokuapp.com"
                     githubLink="https://github.com/praggygruntt/hot-wheels-repo"/> 
