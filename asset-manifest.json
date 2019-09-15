@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/public/static/css/main.e6a583a8.chunk.css",
+    "main.js": "/portfolio/public/static/js/main.5a44fa5f.chunk.js",
+    "main.js.map": "/portfolio/public/static/js/main.5a44fa5f.chunk.js.map",
+    "runtime~main.js": "/portfolio/public/static/js/runtime~main.3a584fa7.js",
+    "runtime~main.js.map": "/portfolio/public/static/js/runtime~main.3a584fa7.js.map",
+    "static/css/2.6b533975.chunk.css": "/portfolio/public/static/css/2.6b533975.chunk.css",
+    "static/js/2.f6f7ee9e.chunk.js": "/portfolio/public/static/js/2.f6f7ee9e.chunk.js",
+    "static/js/2.f6f7ee9e.chunk.js.map": "/portfolio/public/static/js/2.f6f7ee9e.chunk.js.map",
+    "index.html": "/portfolio/public/index.html",
+    "precache-manifest.2c2320eedf38393d90f2a3b979736ecc.js": "/portfolio/public/precache-manifest.2c2320eedf38393d90f2a3b979736ecc.js",
+    "service-worker.js": "/portfolio/public/service-worker.js",
+    "static/css/2.6b533975.chunk.css.map": "/portfolio/public/static/css/2.6b533975.chunk.css.map",
+    "static/css/main.e6a583a8.chunk.css.map": "/portfolio/public/static/css/main.e6a583a8.chunk.css.map",
+    "static/media/CardDealerImage.png": "/portfolio/public/static/media/CardDealerImage.dc97c773.png",
+    "static/media/CouleurImage.png": "/portfolio/public/static/media/CouleurImage.12bf234f.png",
+    "static/media/Headshot.png": "/portfolio/public/static/media/Headshot.510165b0.png",
+    "static/media/HotWheelsRepoImage.png": "/portfolio/public/static/media/HotWheelsRepoImage.57bab87a.png",
+    "static/media/LightsOutImage.png": "/portfolio/public/static/media/LightsOutImage.470717d9.png",
+    "static/media/SippitImage.png": "/portfolio/public/static/media/SippitImage.e2398e46.png",
+    "static/media/YahtzeeImage.png": "/portfolio/public/static/media/YahtzeeImage.01cfa187.png",
+    "static/media/climbing.jpg": "/portfolio/public/static/media/climbing.e5164a80.jpg",
+    "static/media/happyZ.jpg": "/portfolio/public/static/media/happyZ.289c3b8c.jpg",
+    "static/media/zbResume07-14-19.pdf": "/portfolio/public/static/media/zbResume07-14-19.3a9b68b2.pdf"
+  }
+}
